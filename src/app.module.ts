@@ -7,9 +7,6 @@ import { TagsModule } from './api/modules/tags/tags.module';
 import { AuthModule } from './api/modules/auth/auth.module';
 import { UsersModule } from './api/modules/users/users.module';
 import { SessionsModule } from './api/modules/sessions/sessions.module';
-import { UsermeetupModule } from './api/modules/usermeetup/usermeetup.module';
-import { UserMeetupModule } from './api/modules/user-meetup/user-meetup.module';
-import { UserMeetupModule } from './api/modules/user-meetup/user-meetup.module';
 import { UserMeetupModule } from './api/modules/user-meetup/user-meetup.module';
 
 @Module({
@@ -23,7 +20,6 @@ import { UserMeetupModule } from './api/modules/user-meetup/user-meetup.module';
     AuthModule,
     UsersModule,
     SessionsModule,
-    UsermeetupModule,
     UserMeetupModule,
   ],
   controllers: [],
