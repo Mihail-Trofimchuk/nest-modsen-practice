@@ -1,7 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 import { PaginationDto } from 'src/utils/pagination/dto/pagination.dto';
-import { SortingOrderType } from 'src/utils/constants/sorting-order';
 
 export class MeetupsQuery implements PaginationDto {
   @ApiProperty({ required: false })
@@ -37,3 +36,5 @@ export class MeetupsQuery implements PaginationDto {
   @ApiProperty({ required: false })
   sortByLocation: SortingOrderType;
 }
+
+type SortingOrderType = 'asc' | 'desc';

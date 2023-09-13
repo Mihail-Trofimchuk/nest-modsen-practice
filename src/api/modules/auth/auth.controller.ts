@@ -13,7 +13,9 @@ import { CreateUserDto } from '../users/dto/create-user.dto';
 import { LocalAuthGuard } from './guards/local.guard';
 import RequestWithUser from './interfaces/request-with-user.interface';
 import { RefreshAuthGuard } from './guards/refresh.guard';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('auth')
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}

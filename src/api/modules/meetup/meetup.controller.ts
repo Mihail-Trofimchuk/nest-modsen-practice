@@ -44,7 +44,7 @@ export class MeetupController {
     return this.meetupService.create(createMeetupDto, req.user.id);
   }
 
-  @Roles(Role.ORGANIZER)
+  @Roles(Role.USER)
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Get()
   async findAll(
@@ -53,14 +53,14 @@ export class MeetupController {
     return this.meetupService.findAllWithPagination(query);
   }
 
-  @Roles(Role.ORGANIZER)
+  @Roles(Role.USER)
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.meetupService.findOne(+id);
   }
 
-  @Roles(Role.ORGANIZER)
+  @Roles(Role.USER)
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Patch(':id')
   async update(
